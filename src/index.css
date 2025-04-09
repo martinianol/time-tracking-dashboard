@@ -6,10 +6,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Global Styles & Variables */
-:root {
-  --primary-color: #28283D;
-  --font-family: 'Poppins', sans-serif;
-  font-family: var(--font-family);
-}
