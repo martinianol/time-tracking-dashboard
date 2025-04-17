@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+import theme from "../../../theme/theme";
+
+const ACTIVITY_COLORS = {
+  work: theme.colors.orange,
+  play: theme.colors.blue300,
+  study: theme.colors.pink400,
+  exercise: theme.colors.green400,
+  social: theme.colors.purple.purple700,
+  "self-care": theme.colors.yellow300,
+};
+
+export type ActivityType = keyof typeof ACTIVITY_COLORS;
+
 const Container = styled.div`
   position: relative;
   overflow: hidden;
@@ -11,10 +24,10 @@ const ImgContainer = styled.div`
   bottom: 5.5rem;
 `;
 
-const Header = styled.div`
-  background-color: orange;
-  border-radius: 15px;
+const Header = styled.div<{ type: ActivityType }>`
+  background-color: ${({ type }) => ACTIVITY_COLORS[type]};
   padding: 2.375rem 0;
+  border-radius: 15px;
 `;
 
 const Content = styled.section`

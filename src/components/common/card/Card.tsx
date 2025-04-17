@@ -10,6 +10,7 @@ import {
   PastTracking,
   Header,
   ImgContainer,
+  ActivityType,
 } from "./Card.styles";
 
 interface Stats {
@@ -17,12 +18,12 @@ interface Stats {
   previous: number;
 }
 
-const Card = ({ title, stats }: { title: string; stats: Stats }) => {
+const Card = ({ title, stats }: { title: ActivityType; stats: Stats }) => {
   return (
     <Container>
-      <Header />
+      <Header type={title} />
       <ImgContainer>
-        <Icon name="work" />
+        <Icon name={title} />
       </ImgContainer>
       <Content>
         <ActiviyHeader>

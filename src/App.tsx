@@ -22,10 +22,11 @@ function App() {
       <MainContainer>
         <CardsContainer>
           <Card title="work" stats={DEFAULT_STATS} />
-          <Card title="work" stats={DEFAULT_STATS} />
-          <Card title="work" stats={DEFAULT_STATS} />
-          <Card title="work" stats={DEFAULT_STATS} />
-          <Card title="work" stats={DEFAULT_STATS} />
+          <Card title="play" stats={DEFAULT_STATS} />
+          <Card title="study" stats={DEFAULT_STATS} />
+          <Card title="exercise" stats={DEFAULT_STATS} />
+          <Card title="social" stats={DEFAULT_STATS} />
+          <Card title="self-care" stats={DEFAULT_STATS} />
         </CardsContainer>
       </MainContainer>
     </>
