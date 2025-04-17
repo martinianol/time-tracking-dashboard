@@ -21,7 +21,7 @@ const Container = styled.div`
 const ImgContainer = styled.div`
   position: absolute;
   right: 1rem;
-  bottom: 5.5rem;
+  top: -0.75rem;
 `;
 
 const Header = styled.div<{ type: ActivityType }>`
