@@ -29,7 +29,7 @@ const Card = ({ title, stats }: { title: ActivityType; stats: Stats }) => {
         <ActiviyHeader>
           <ActivityName>{title}</ActivityName>
           <ActivityAction>
-            <Icon name="ellipsis" />
+            <Icon name="ellipsis" width="21px" height="5px" />
           </ActivityAction>
         </ActiviyHeader>
         <ActivityStats>
