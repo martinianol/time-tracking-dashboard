@@ -9,6 +9,7 @@ import {
   Container,
   PastTracking,
   Header,
+  ImgContainer,
 } from "./Card.styles";
 
 interface Stats {
@@ -20,6 +21,9 @@ const Card = ({ title, stats }: { title: string; stats: Stats }) => {
   return (
     <Container>
       <Header />
+      <ImgContainer>
+        <Icon name="work" />
+      </ImgContainer>
       <Content>
         <ActiviyHeader>
           <ActivityName>{title}</ActivityName>

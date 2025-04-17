@@ -2,12 +2,19 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
+  overflow: hidden;
+`;
+
+const ImgContainer = styled.div`
+  position: absolute;
+  right: 1rem;
+  bottom: 5.5rem;
 `;
 
 const Header = styled.div`
   background-color: orange;
   border-radius: 15px;
-  padding: 2rem 0;
+  padding: 2.375rem 0;
 `;
 
 const Content = styled.section`
@@ -17,7 +24,7 @@ const Content = styled.section`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: -2rem; // overlapping by padding height
+  margin-top: -2.375rem; // overlapping by padding height
   position: relative;
 `;
 
@@ -57,6 +64,7 @@ const ActivityAction = styled.div`
 `;
 
 export {
+  ImgContainer,
   Container,
   Content,
   Header,
