@@ -10,16 +10,22 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const DEFAULT_STATS = {
+  current: 32,
+  previous: 36,
+};
+
 function App() {
   return (
     <>
       <GlobalStyle />
       <MainContainer>
         <CardsContainer>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card title="work" stats={DEFAULT_STATS} />
+          <Card title="work" stats={DEFAULT_STATS} />
+          <Card title="work" stats={DEFAULT_STATS} />
+          <Card title="work" stats={DEFAULT_STATS} />
+          <Card title="work" stats={DEFAULT_STATS} />
         </CardsContainer>
       </MainContainer>
     </>
