@@ -9,12 +9,13 @@ import {
   Menu,
   MenuItem,
 } from "./UserCard.styles";
+import { Timeframe } from "../../../App";
 
 interface UserCardProps {
   name: string;
   avatar: string;
-  activeState?: string;
-  onChange?: (state: string) => void;
+  timeFrame?: string;
+  onChange?: (state: Timeframe) => void;
 }
 
 const MENU_ITEMS = [
@@ -26,10 +27,10 @@ const MENU_ITEMS = [
 const UserCard: React.FC<UserCardProps> = ({
   name,
   avatar,
-  activeState = "weekly",
+  timeFrame = "weekly",
   onChange,
 }) => {
-  const handleMenuClick = (state: string) => {
+  const handleMenuClick = (state: Timeframe) => {
     if (onChange) {
       onChange(state);
     }
@@ -47,8 +48,8 @@ const UserCard: React.FC<UserCardProps> = ({
         {MENU_ITEMS.map((item) => (
           <MenuItem
             key={item.value}
-            $active={activeState === item.value}
-            onClick={() => handleMenuClick(item.value)}
+            $active={timeFrame === item.value}
+            onClick={() => handleMenuClick(item.value as Timeframe)}
           >
             {item.label}
           </MenuItem>
