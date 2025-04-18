@@ -1,5 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
 import Card from "./components/common/card/Card";
+import UserCard from "./components/common/UserCard/UserCard";
+import avatarImage from "./assets/images/image-jeremy.png"; // Adjust the path based on your folder structure
+
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -20,6 +23,7 @@ function App() {
     <>
       <GlobalStyle />
       <MainContainer>
+        <UserCard name="Jeremy Robson" avatar={avatarImage} />
         <CardsContainer>
           <Card title="work" stats={DEFAULT_STATS} />
           <Card title="play" stats={DEFAULT_STATS} />
@@ -42,6 +46,7 @@ const MainContainer = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 `;
 
 const CardsContainer = styled.div`
