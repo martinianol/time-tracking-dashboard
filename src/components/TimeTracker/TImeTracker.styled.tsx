@@ -10,7 +10,7 @@ export const TrackTimeContainer = styled.div`
   max-width: 70rem;
 
   @media (min-width: ${BREAK_POINTS.tablet}) {
-    min-width: 34.5rem;
+    min-width: 37rem;
     width: 80vw;
     margin: 0 auto;
   }

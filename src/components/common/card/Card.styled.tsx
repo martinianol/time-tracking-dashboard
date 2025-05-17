@@ -92,6 +92,10 @@ const ActivityName = styled.h2`
   font: ${({ theme }) => theme.typography.textPreset5M.style};
   color: ${({ theme }) => theme.colors.primary.white};
   text-transform: capitalize;
+
+  @media (min-width: ${BREAK_POINTS.tablet}) {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+  }
 `;
 
 const ActualTracking = styled.p`
@@ -99,7 +103,7 @@ const ActualTracking = styled.p`
 
   @media (min-width: ${BREAK_POINTS.tablet}) {
     font: ${({ theme }) => theme.typography.textPreset1.style};
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
   }
 `;
 
@@ -108,7 +112,7 @@ const PastTracking = styled.p`
   font: ${({ theme }) => theme.typography.textPreset6.style};
 
   @media (min-width: ${BREAK_POINTS.tablet}) {
-    font-size: clamp(0.8rem, 2vw, 0.9375rem);
+    font-size: clamp(0.8rem, 1.85vw, 0.9375rem);
   }
 `;
 
