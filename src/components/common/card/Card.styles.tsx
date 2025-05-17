@@ -96,14 +96,20 @@ const ActivityName = styled.h2`
 
 const ActualTracking = styled.p`
   font: ${({ theme }) => theme.typography.textPreset3.style};
+
   @media (min-width: ${BREAK_POINTS.tablet}) {
     font: ${({ theme }) => theme.typography.textPreset1.style};
+    font-size: clamp(2rem, 5vw, 3.5rem);
   }
 `;
 
 const PastTracking = styled.p`
   color: ${({ theme }) => theme.colors.navy.navy200};
   font: ${({ theme }) => theme.typography.textPreset6.style};
+
+  @media (min-width: ${BREAK_POINTS.tablet}) {
+    font-size: clamp(0.8rem, 2vw, 0.9375rem);
+  }
 `;
 
 const ActivityAction = styled.div`
