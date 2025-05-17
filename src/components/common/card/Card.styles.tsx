@@ -8,7 +8,7 @@ const ACTIVITY_COLORS = {
   study: theme.colors.pink400,
   exercise: theme.colors.green400,
   social: theme.colors.purple.purple700,
-  "self-care": theme.colors.yellow300,
+  "self care": theme.colors.yellow300,
 };
 
 export type ActivityType = keyof typeof ACTIVITY_COLORS;
@@ -39,6 +39,9 @@ const Content = styled.section`
   gap: 0.5rem;
   margin-top: -2.375rem; // overlapping by padding height
   position: relative;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.navy.navy800};
+  }
 `;
 
 const ActiviyHeader = styled.div`
@@ -46,6 +49,9 @@ const ActiviyHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const ActivityStats = styled.div`
