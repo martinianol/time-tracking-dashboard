@@ -11,7 +11,7 @@ import {
   Header,
   ImgContainer,
   ActivityType,
-} from "./Card.styles";
+} from "./Card.styled";
 
 interface Stats {
   current: number;

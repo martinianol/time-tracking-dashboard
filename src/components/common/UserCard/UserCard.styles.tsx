@@ -89,7 +89,7 @@ export const MenuItem = styled.button<{ $active?: boolean }>`
   border: none;
   color: ${({ $active, theme }) =>
     $active ? theme.colors.primary.white : theme.colors.purple.purple500};
-  font: ${({ theme }) => theme.typography.textPreset6.style};
+  font: ${({ theme }) => theme.typography.textPreset5R.style};
   line-height: 21px;
   cursor: pointer;
   transition: color 0.3s;

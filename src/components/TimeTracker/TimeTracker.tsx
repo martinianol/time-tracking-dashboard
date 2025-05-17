@@ -1,7 +1,7 @@
 import { useState } from "react";
 import data from "../../data/data.json";
 import avatarImage from "../../assets/images/image-jeremy.png";
-import { ActivityType } from "../common/Card/Card.styles";
+import { ActivityType } from "../common/Card/Card.styled";
 import { CardsContainer } from "../common/Common/CommonComponents";
 import { TrackTimeContainer } from "./TImeTracker.styled";
 import Card from "../common/Card/Card";
