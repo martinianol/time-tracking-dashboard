@@ -1,6 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 const mainFont = "'Rubik', sans-serif";
+const mainLightFont = "'Rubik Light', sans-serif";
 
 export const theme: DefaultTheme = {
   colors: {
@@ -48,7 +49,7 @@ export const theme: DefaultTheme = {
       size: "2.5rem",
       lineHeight: "2.375rem",
       weight: "300",
-      style: `300 2.5rem/2.375rem ${mainFont}`,
+      style: `300 2.5rem/2.375rem ${mainLightFont}`,
     },
     textPreset3: {
       size: "2rem",
