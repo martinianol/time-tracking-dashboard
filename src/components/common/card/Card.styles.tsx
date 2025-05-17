@@ -51,6 +51,9 @@ const ActiviyHeader = styled.div`
   align-items: center;
   &:hover {
     cursor: pointer;
+    img {
+      filter: brightness(0) invert(1);
+    }
   }
 `;
 
