@@ -9,7 +9,8 @@ import {
   Menu,
   MenuItem,
 } from "./UserCard.styles";
-import { Timeframe } from "../../../App";
+import { Timeframe } from "../../TimeTracker/TimeTracker";
+
 
 interface UserCardProps {
   name: string;

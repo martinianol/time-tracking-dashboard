@@ -11,7 +11,8 @@ export const UserCardContainer = styled.div`
   border-radius: 15px;
 
   @media (min-width: ${BREAK_POINTS.laptop}) {
-    height: 100%;
+    justify-content: space-between;
+    height: 100%
   }
 `;
 
