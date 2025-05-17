@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BREAK_POINTS } from "../../../consts/consts";
 
 export const UserCardContainer = styled.div`
   display: flex;
@@ -8,6 +9,11 @@ export const UserCardContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.navy.navy900};
   width: 100%;
   border-radius: 15px;
+
+  @media (min-width: ${BREAK_POINTS.laptop}) {
+    justify-content: space-between;
+    height: 100%
+  }
 `;
 
 export const TopSection = styled.div`
@@ -19,6 +25,13 @@ export const TopSection = styled.div`
   border-radius: 15px;
   padding: 2rem;
   z-index: 1;
+
+  @media (min-width: ${BREAK_POINTS.laptop}) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    flex-grow: 1.68;
+  }
 `;
 
 export const Avatar = styled.img`
@@ -32,6 +45,10 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  @media (min-width: ${BREAK_POINTS.laptop}) {
+    max-width: 138px;
+  }
 `;
 
 export const Greeting = styled.p`
@@ -41,8 +58,14 @@ export const Greeting = styled.p`
 
 export const Name = styled.h1`
   font: ${({ theme }) => theme.typography.textPreset4.style};
-  font-size: 24px;
+  font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.primary.white};
+
+  @media (min-width: ${BREAK_POINTS.laptop}) {
+    font: ${({ theme }) => theme.typography.textPreset2.style};
+    font-size: 2.5rem;
+    line-height: 117.5%;
+  }
 `;
 
 export const Menu = styled.div`
@@ -51,6 +74,14 @@ export const Menu = styled.div`
   border-radius: 10px;
   padding: 1.5rem 0;
   width: 100%;
+
+  @media (min-width: ${BREAK_POINTS.laptop}) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    gap: 1.3125rem; //CHECK
+  }
 `;
 
 export const MenuItem = styled.button<{ $active?: boolean }>`
@@ -58,7 +89,7 @@ export const MenuItem = styled.button<{ $active?: boolean }>`
   border: none;
   color: ${({ $active, theme }) =>
     $active ? theme.colors.primary.white : theme.colors.purple.purple500};
-  font: ${({ theme }) => theme.typography.textPreset6.style};
+  font: ${({ theme }) => theme.typography.textPreset5R.style};
   line-height: 21px;
   cursor: pointer;
   transition: color 0.3s;

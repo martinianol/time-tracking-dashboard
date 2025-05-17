@@ -1,13 +1,20 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { BREAK_POINTS } from "../../../consts/consts";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    background-color: ${({ theme }) => theme.colors.navy.navy950};
+    color: white;
+    font-family: ${({ theme }) => theme.fonts.main}
+  }
+`;
 
 export const MainContainer = styled.main`
-  min-height: 100vh;
-  padding: 1rem;
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
 `;
 
 export const CardsContainer = styled.div`
@@ -15,6 +22,15 @@ export const CardsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (min-width: ${BREAK_POINTS.tablet}) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: ${BREAK_POINTS.laptop}) {
+    gap: 2rem;
+  }
 `;
 
 export const PageContainer = styled.div`
