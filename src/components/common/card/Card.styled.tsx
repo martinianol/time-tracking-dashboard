@@ -50,6 +50,7 @@ const Content = styled.section`
   position: relative;
   &:hover {
     background-color: ${({ theme }) => theme.colors.navy.navy800};
+    cursor: pointer;
   }
 
   @media (min-width: ${BREAK_POINTS.tablet}) {
